@@ -13,7 +13,7 @@
     var volumeControl = document.getElementById("volume-control");
     volumeControl.addEventListener('change', function(event) {
       var value = event.srcElement.value;
-      xhttp.open("GET", "http://localhost:3000/volume?volume=" + value, true);
+      xhttp.open("GET", window.location + "volume?volume=" + value, true);
       xhttp.send();
     }, false);
   </script>
