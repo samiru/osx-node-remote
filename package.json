@@ -1,0 +1,28 @@
+{
+  "name": "osx-node-remote",
+  "version": "1.0.0",
+  "description": "Remote control OS X through web server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samiru/osx-node-remote.git"
+  },
+  "keywords": [
+    "osx",
+    "nodejs",
+    "osascript"
+  ],
+  "author": "Sami Ruokamo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samiru/osx-node-remote/issues"
+  },
+  "homepage": "https://github.com/samiru/osx-node-remote#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "osascript": "^1.2.0"
+  }
+}

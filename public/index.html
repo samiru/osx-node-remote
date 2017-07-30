@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>OSX Remote Control</title>
+</head>
+
+<body>
+  <input id="volume-control" type="range" min="0" max="100" step="1" />
+  <script>
+    var xhttp = new XMLHttpRequest();
+
+    var volumeControl = document.getElementById("volume-control");
+    volumeControl.addEventListener('change', function(event) {
+      var value = event.srcElement.value;
+      xhttp.open("GET", "http://localhost:3000/volume?volume=" + value, true);
+      xhttp.send();
+    }, false);
+  </script>
+</body>
+
+</html>
