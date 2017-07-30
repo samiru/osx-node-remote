@@ -6,8 +6,8 @@ var app = express();
 app.use(express.static('public'));
 
 app.get('/volume', function(req, res) {
-  console.log(req);
-  var volume = req.query.volume;
+  var volume = parseInt(req.query.volume);
+
   osascript("set volume output volume " + volume + " --100%", {type: "AppleScript"}, function(err, data) {
     console.log(err);
     console.log(data);
