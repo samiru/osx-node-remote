@@ -1,3 +1,1 @@
 # osx-node-remote
-
-xxx
