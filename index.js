@@ -14,6 +14,20 @@ app.get('/volume', function(req, res) {
   });
 });
 
+app.get('/mute', function(req, res) {
+  osascript("set volume output muted true", {type: "AppleScript"}, function(err, data) {
+    console.log(err);
+    console.log(data);
+  });
+});
+
+app.get('/unmute', function(req, res) {
+  osascript("set volume output muted false", {type: "AppleScript"}, function(err, data) {
+    console.log(err);
+    console.log(data);
+  });
+});
+
 app.listen(3000, function() {
   console.log('OSX Remote Control listening on port 3000!');
 });
